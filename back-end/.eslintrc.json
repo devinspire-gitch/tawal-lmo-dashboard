@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "loopback",
+    "plugin:promise/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["promise", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-empty-interface": "off"
+  }
+}

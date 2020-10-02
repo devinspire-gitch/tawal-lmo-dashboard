@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "tawal-lmo-api",
+      "script": "./node_modules/.bin/ts-node",
+      "args": "server/server.ts",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "instances": "max",
+      "exec_mode": "cluster"
+    }
+  ]
+}

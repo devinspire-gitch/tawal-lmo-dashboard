@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": "5432",
+    "database": "tawal_lmo",
+    "username": "tawal_lmo",
+    "password": "tawal_lmo",
+    "name": "db",
+    "debug": true,
+    "connector": "postgresql"
+  }
+}

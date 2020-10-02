@@ -1,0 +1,35 @@
+{
+  "name": "issueType",
+  "plural": "issueTypes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": { "validateUpsert": true },
+  "properties": {
+    "id": { "type": "number", "id": true, "required": true },
+    "name": { "type": "string", "required": true },
+    "code": { "type": "string", "required": true }
+  },
+  "validations": [],
+  "relations": {
+    "issues": {
+      "type": "hasMany",
+      "model": "issue",
+      "foreignKey": "typeId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

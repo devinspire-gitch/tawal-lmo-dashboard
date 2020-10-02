@@ -1,0 +1,10 @@
+{
+  "name": "common",
+  "description": "Shared lib for this project.",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "setting",
+  "plural": "settings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": { "validateUpsert": true },
+  "mixins": { "TimeStamp": { "required": false, "validateUpsert": true } },
+  "properties": {
+    "id": { "type": "number", "id": true, "required": true },
+    "name": { "type": "string", "required": true },
+    "value": { "type": "string", "required": true },
+    "type": { "type": "string" }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "*"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "*"
+    }
+  ],
+  "methods": {}
+}
